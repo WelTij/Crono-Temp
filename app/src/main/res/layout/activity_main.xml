@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    android:orientation="horizontal">
+
+
+    <!-- Columna 1 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:text="00:00:00" />
+
+        <!-- Espacio en blanco -->
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+
+        <!-- Botones en la parte inferior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_height="wrap_content"
+                android:text="Iniciar" />
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:text="Pausa"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Reiniciar"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/parcialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:text="Guardar"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Columna 2 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/temporizadorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:text="00:00:00" />
+
+        <!-- Cajas de texto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top|center_horizontal"
+            android:orientation="horizontal">
+
+
+
+            <EditText
+                android:id="@+id/hoursEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:hint="@string/horas"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:minWidth="150dp"
+                android:autofillHints="yes" />
+
+            <EditText
+                android:id="@+id/minutesEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:hint="@string/minutos"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:minWidth="150dp"
+                android:autofillHints="yes"/>
+
+            <EditText
+                android:id="@+id/secondsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:hint="@string/segundos"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:minWidth="150dp"
+                android:autofillHints="yes"/>
+
+
+        </LinearLayout>
+
+        <!-- Espacio en blanco -->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1" />-->
+        <FrameLayout
+            android:id="@+id/fragment_container_temporizador"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Botones en la parte inferior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/startTemporizadorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/iniciarTemp" />
+
+
+            <Button
+                android:id="@+id/pauseTemporizadorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/pausaTemp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/resetTemporizadorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/reiniciarTemp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/parcialTemporizadorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_1"
+                android:textColor="@drawable/txt_btn_2"
+                android:layout_marginBottom="16dp"
+                android:text="Guardar"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
